@@ -14,7 +14,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: process.env.URL,
+        origin: 'https://shadab-chess.netlify.app/',
         credentials: true,
     },
 });
