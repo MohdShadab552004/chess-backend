@@ -26,7 +26,11 @@ let waitingQueue = [];
 const games = {}; 
 const playerRoomId = {};
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://shadab-chess.netlify.app',
+    credentials: true,
+}));
+
 
 app.get("/", (req, res) => {
     res.send("Welcome to Chess!");
